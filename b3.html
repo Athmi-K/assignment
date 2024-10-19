@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luscious New York Cheese Cake</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-luscious-new-york-cheese-cake-500-gm--262890-1.jpg" alt="New York Cheese Cake">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-luscious-new-york-cheese-cake-500-gm--262890-2.jpg" alt="New York Cheese Cake">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-luscious-new-york-cheese-cake-500-gm--262890-3.jpg" alt="New York Cheese Cake">
+        <p>Luscious New York Cheese Cake</p>
+    </div>
+    <div class="con">
+        <article>&#8377;1295</article>
+    </div>
+    <div class="weight">
+        <p>Select weight</p>
+    </div>
+    <div class="box">
+        <button>0.5Kg</button>
+    </div>
+    <form>
+        <label for="cakeMessage">Cake Message</label><br>
+        <input type="text" id="cakeMessage" name="cakeMessage" required placeholder="Enter message on cake">
+        <br>
+    
+        <label for="deliveryLocation">Delivery Location</label><br>
+        <input type="text" id="deliveryLocation" name="deliveryLocation" placeholder="Enter your address with pincode" required>
+        <br>
+    </form>
+    <div class="cart">
+        <button class="add-to-cart" data-name="Luscious New York Cheese Cake" data-price="1295">Add to Cart</button>
+        <button>Buy at &#8377;1295</button>
+    </div>
+
+    <script>
+     
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let newItem = { name: name, price: price };
+            cart.push(newItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to the cart at ₹${price}`); 
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    let name = this.getAttribute('data-name');
+                    let price = parseInt(this.getAttribute('data-price')); 
+                    addToCart(name, price);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

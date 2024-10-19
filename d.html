@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicorn Theme Chocolate Pinata Cake</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-unicorn-theme-chocolate-pinata-ball-cake-750-grams--146284-1.jpg" alt="Unicorn Theme Chocolate Pinata Cake">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-unicorn-theme-chocolate-pinata-ball-cake-750-grams--146284-3.jpg" alt="Unicorn Theme Chocolate Pinata Cake">
+        <img src="https://cdn.igp.com/f_auto,q_auto,t_pnopt6prodlp/products/p-unicorn-theme-chocolate-pinata-ball-cake-750-grams--146284-5.jpg" alt="Unicorn Theme Chocolate Pinata Cake">
+        <p>Unicorn Theme Chocolate Pinata Cake (750 gm)</p>
+    </div>
+    <div class="con">
+        <article>&#8377;1499</article>
+    </div>
+    <div class="weight">
+        <p>Select weight</p>
+    </div>
+    <div class="box">
+        <button>0.5Kg</button>
+    </div>
+    <form>
+        <label for="cakeMessage">Cake Message</label><br>
+        <input type="text" id="cakeMessage" name="cakeMessage" required placeholder="Enter message on cake">
+        <br>
+    
+        <label for="deliveryLocation">Delivery Location</label><br>
+        <input type="text" id="deliveryLocation" name="deliveryLocation" placeholder="Enter your address with pincode" required>
+        <br>
+    </form>
+    <div class="cart">
+        <button class="add-to-cart" data-name="Unicorn Theme Chocolate Pinata Cake" data-price="1499">Add to Cart</button>
+        <button>Buy at &#8377;1499</button>
+    </div>
+
+    <script>
+        
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let newItem = { name: name, price: price };
+            cart.push(newItem);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to the cart at ₹${price}`); 
+        }
+
+       
+        document.addEventListener('DOMContentLoaded', function () {
+            let addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    let name = this.getAttribute('data-name');
+                    let price = parseInt(this.getAttribute('data-price')); 
+                    addToCart(name, price);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+.container img{
+    width:300px;
+    height:300px;
+    margin-left: 150px;
+    padding-left: 10px;
+    justify-content: center;
+    border-radius:20px;
+}
+p{
+    font-size: larger;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+hr{
+    color: rgb(255, 249, 249);
+}
+article{
+    color:red;
+    font-weight: bold;
+    font-size:x-large;
+    margin-bottom: 20px;
+}
+.container1{
+    width:100px;
+    height:25px;
+    border: solid 1px black;
+    
+}
+p1{
+    margin-left:20px;
+    color:rgb(17, 215, 17)
+}
+article1{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    font-weight:lighter;
+    color:rgb(222, 221, 221);
+    
+}
+article1::before{
+    content: "";
+    position: absolute;
+    top:25%;
+    left: 0;
+    width: 45px;
+    height: 1px; 
+    background-color: rgb(248, 190, 190); 
+    transform: translateY(-50%); 
+    pointer-events:none;
+}
+.con{
+    display:grid;
+    grid-template-columns: repeat(25,1fr);
+}
+.box{
+    width:100px;
+    height:20px;
+    border:solid 2px red;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+p2{
+   font-family: sans-serif;
+   font-size: x-large; 
+}
+  p3{
+    padding-top: 500px;
+    margin-left:25px ;
+    justify-content: center;
+}
+#cakemessage{
+    width:100px;
+    height:20px;
+    border:solid 2px rgb(222, 221, 221);
+}
+#cakeMessage,#deliveryLocation{
+    width:500px;
+    height:50px;
+    margin-top: 20px;
+    margin-bottom:20px ;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+label{
+    margin-top: 20px;
+    font-size: larger;
+    font-family: sans-serif;
+}
+.cart button {
+    grid-column: 2 / -1; 
+    padding: 10px;
+    background-color: #f83636;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+    width:200px;
+    margin-top: 30px;
+}
+
+.cart button:hover {
+    background-color:#66e616 ;
+}
+button{
+    border:none;
+    background-color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
